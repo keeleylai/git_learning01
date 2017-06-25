@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>Title</title>
+    <script src="bower/bower_components/jquery/dist/jquery.js"></script>        <!--引用jquery-->
+    <script src="bower/bower_components/bootstrap/dist/js/bootstrap.js"></script>   <!--引用bootstrap-->
+    <link rel="stylesheet" href="bower/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        #header{
+            background:rgba(242,101,34,1);
+       }
+        #navbar-location{
+            marginLeft:20px;
+            lineHeight:45px;
+        }
+        .navbar-brand{
+            padding: 0px;
+        }
+        #movie-collapse{
+            position: absolute;
+            right: 0;
+            background:rgba(242,101,34,1);
+        }
+        #movie-collapse ul li a{
+            color: white;
+        } /*到具体路迳就按顺序写，最后根据超链接还是图片来写a或是img*/
+        #movie-collapse ul li img{
+            height: 20px;
+        }
+        .icon-bar{
+            background-color: white;
+        }/*定义导航条的右边三横线*/
+        #navbar-location{
+            line-height: 45px;
+            margin-left: 20px;
+        }
+        #navbar-location a{
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+        } /*因为带有超链接，所以通过a来定义*/
+        #dianying{
+            width: 50px;
+            height: 20px;
+            color: pink;
+
+        }
+        .poster img{
+            width: 80px;
+            margin-left: 8px;
+        }
+        .d{
+            font-size: 15px;
+            background-color: blue;
+            color: white;
+            padding: 0px 5px;
+          }
+        .pingfen{
+            color: red;
+            float: right;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        .renshu{
+            color: red;
+            font-size: 10px;
+        }
+        .movie{
+            border-bottom：1px solid #ccc;
+            margin: 10px;
+        }
+</style>
+</head>
+<body>
+<!--第一部分导航条-->
+<!--引用http://v3.bootcss.com中导航条实例link代码-->
+<nav class="navbar">
+        <div class="navbar-header" id="header">
+            <a class="navbar-brand" href="#">
+                <img src="APP/img/index-header01.png" height="49" alt=""> <!--alt是指图片显示不出来，就调用显示-->
+            </a>
+           <span id="navbar-location"><a href=""> 广州<span class="caret" ></a></span> <!--caret代表下拉三角符-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#movie-collapse" >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="movie-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#"><img src="APP/img/index-header04.png" height="39">首页</a> </li>
+                <li><a href="#"><img src="APP/img/index-header05.png" height="39">个人中心</a> </li>
+            </ul>
+        </div>
+</nav>
+
+<!--第二部分选择分类(老师还没有讲）-->
+    <div id="dianying">电影
+
+    </div>
+
+<!--第三部份，呈现电影&影院详情-->
+<div class="tab-content">
+    <div class="media-plan" id="movie-plan">
+        <p class="sale-type">正在售票</p>
+        <div class="media movie">
+            <div class="media-left poster"> <!--中间通过空格表示几个类，本文中包括media-left和poster两个类-->
+            <a href="#">
+                <img class="media-object" src="APP/img/poster01.png" alt="...">
+            </a>
+        </div>
+            <div class="media-body">
+                <div class="media-heading">
+                    变形金刚5
+                    <span class="d">IMAX3D</span>  <!--class不能带有数字，举例2d3d这种-->
+                    <span class="pingfen">7<sup>.2</sup></span>
+                </h4>
+                <p>满地金属轰哐嘣，博派狂派再交锋</p>
+                <p><span class="renshu">100</span>人购票 </p>
+            </div>
+        </div>
+       </div>
+        <div class="media movie">
+            <div class="media-left poster">
+                <a href="#">
+                    <img class="media-object" src="APP/img/poster05.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <div class="media-heading">
+                    银河护卫队5
+                    <span class="d">3D</span>  <!--class不能带有数字，举例2d3d这种-->
+                    <span class="pingfen">8<sup>.9</sup></span>
+                    </h4>
+                    <p>让我们来守护银河吧！</p>
+                    <p><span class="renshu">900</span>人购票 </p>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
